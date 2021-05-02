@@ -1,3 +1,4 @@
+/* global Morebits */
 import { Twinkle, init, loadAdditionalMediaWikiMessages, SiteConfig } from './core';
 import messages from './messages.json';
 import mwMessageList from './mw-messages';
@@ -15,7 +16,7 @@ if (!Morebits.userIsInGroup('autoconfirmed') && !Morebits.userIsInGroup('confirm
 
 Twinkle.userAgent = `Twinkle (${mw.config.get('wgWikiID')})`;
 
-Twinkle.summaryAd = ' ([[Project:TW|TW]])';
+Twinkle.summaryAd = ''; // TODO Not now
 
 Twinkle.changeTags = '';
 
@@ -38,11 +39,11 @@ Twinkle.registeredModules = [Fluff, Diff];
 
 SiteConfig.permalinkSpecialPageName = 'Special:PermanentLink';
 
-SiteConfig.botUsernameRegex = /bot\b/i;
+SiteConfig.botUsernameRegex = /([Bb][Oo][Tt]|บอต)\b/i;
 
 SiteConfig.flaggedRevsNamespaces = [];
 
-SiteConfig.redirectTagAliases = ['#REDIRECT'];
+SiteConfig.redirectTagAliases = ['#REDIRECT', '#redirect', '#เปลี่ยนทาง'];
 
 // Go!
 init();
