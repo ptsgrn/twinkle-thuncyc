@@ -1,6 +1,6 @@
 {
 	"name": "twinkle-thuncyc",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Localized twinkle for Thai uncyclopedia.",
 	"scripts": {
 		"format": "prettier --write .",
