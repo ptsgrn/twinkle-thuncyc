@@ -48,16 +48,16 @@ const minimist = require('minimist');
 // All file paths are with respect to repository root
 // Remove twinkle-pagestyles.css if deploying as user script
 const deployTargets = [
-	{ file: 'build/twinkle.js', target: 'MediaWiki:Gadget-TwinkleV3.js' },
-	{ file: 'build/twinkle.css', target: 'MediaWiki:Gadget-TwinkleV3.css' },
-	{ file: 'build/morebits.js', target: 'MediaWiki:Gadget-morebitsV3.js' },
+	{ file: 'build/twinkle.js', target: 'MediaWiki:Gadget-Twinkle.js' },
+	{ file: 'build/twinkle.css', target: 'MediaWiki:Gadget-Twinkle.css' },
+	{ file: 'build/morebits.js', target: 'MediaWiki:Gadget-morebits.js' },
 	{
 		file: 'build/morebits.css',
-		target: 'MediaWiki:Gadget-morebitsV3.css',
+		target: 'MediaWiki:Gadget-morebits.css',
 	},
 	{
 		file: 'build/twinkle-pagestyles.css',
-		target: 'MediaWiki:Gadget-Twinkle-pagestylesV3.css',
+		target: 'MediaWiki:Gadget-Twinkle-pagestyles.css',
 	},
 ];
 
@@ -100,7 +100,10 @@ class Deploy {
 		} else {
 			if (!config.apiUrl) {
 				if (Object.keys(config).length) {
-					log('yellow', 'Tip: you can avoid this prompt by setting the apiUrl as well in credentials.json');
+					log(
+						'yellow',
+						'Tip: you can avoid this prompt by setting the apiUrl as well in credentials.json'
+					);
 				}
 				const site = await prompt('> Enter sitename (eg. en.wikipedia.org)');
 				config.apiUrl = `https://${site}/w/api.php`;
