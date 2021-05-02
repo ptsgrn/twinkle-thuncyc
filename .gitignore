@@ -27,5 +27,8 @@ Icon
 node_modules/
 npm-debug.log*
 
-#Generated files
+# Generated files
 build/
+
+# Vim
+*.sw*
