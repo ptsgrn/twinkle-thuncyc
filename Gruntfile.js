@@ -19,12 +19,7 @@ function makeHeader() {
 		'[WARN] Git working directory is not clean.');
 
 	let header =
-`/*  _______________________________________________________________________________	
- * |                                                                               |
- * |                     === WARNING: GLOBAL GADGET FILE ===                       |
- * |                   Changes to this page affect many users.                     |
- * |  Please discuss changes on the talk page or on [[WT:Gadget]] before editing.  |
- * |_______________________________________________________________________________|
+`/*
  *
  * Built from source code at GitHub repository [https://github.com/ptsgrn/twinkle-thuncyc]
  * All changes should be made in the repository. Please do not attempt to edit this file directly.
@@ -37,6 +32,12 @@ function makeHeader() {
  * https://github.com/ptsgrn/twinkle-thuncyc/tree/${commitSHA}
  * Changes between two commits of Twinkle can be compared using
  * https://github.com/ptsgrn/twinkle-thuncyc/compare/COMMIT_HASH_1..COMMIT_HASH_2
+ *
+ * สคริปต์นี้ถูกปรับปรุงใน Github การแก้ไขใด ๆ ที่นี่โดยตรงจะถูกเขียนทับอย่างไม่ไยดี หากพบปัญหา
+ * กรุณาติดต่อ [[ผู้ใช้:Patzagorn Y?]]
+ * ในฐานะบำรุงรักษา หรือหากคุณพอมีความรู้ด้านนี้ สามารถส่ง Pull request ได้ที่ 
+ * <https://github.com/ptsgrn/twinkle-thuncyc/>
+ * @rev ${commitSHA}
 `;
 	}
 
