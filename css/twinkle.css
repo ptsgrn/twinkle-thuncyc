@@ -8,8 +8,8 @@
 
 /* The additional box on user skin.js and twinklepreferences.js pages */
 #twinkle-config-headerbox {
-	border: 1px #f60 solid;
-	background: #fed;
+	border: 1px solid #f60;
+	background-color: #fed;
 	padding: 0.6em;
 	margin: 0.5em auto;
 	text-align: center;
